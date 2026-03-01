@@ -27,7 +27,8 @@
   "sideEffects": false,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm build:lib && pnpm build:docs",
+    "build:docs": "next build",
     "build:lib": "tsup",
     "start": "next start",
     "lint": "eslint .",
