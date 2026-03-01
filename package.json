@@ -1,8 +1,15 @@
 {
   "name": "nui-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React UI library with custom initialization, powerful theming, and zero external dependencies.",
-  "keywords": ["react", "ui", "components", "theme", "css-variables", "typescript"],
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "theme",
+    "css-variables",
+    "typescript"
+  ],
   "license": "MIT",
   "author": "eliasb",
   "main": "dist/index.cjs",
