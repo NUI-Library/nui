@@ -30,31 +30,25 @@ jobs:
         run: pnpm build:lib
 
   publish-npm:
-    needs: build-and-test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write 
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: 'https://registry.npmjs.org'
-      
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
+  needs: build-and-test
+  if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+  runs-on: ubuntu-latest
+  permissions:
+    contents: read
+    id-token: write
 
-      - name: Install dependencies
-        run: pnpm install
+  steps:
+    - uses: actions/checkout@v4
 
-      - name: Build
-        run: pnpm build:lib
+    - uses: pnpm/action-setup@v4
+      with:
+        version: 9
 
-      - name: Publish to NPM
-        run: pnpm publish --no-git-checks --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        registry-url: 'https://registry.npmjs.org'
+
+    - run: pnpm install
+    - run: pnpm build:lib
+    - run: pnpm publish --provenance --access public
