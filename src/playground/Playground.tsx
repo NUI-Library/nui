@@ -1031,7 +1031,7 @@ function AboutPage() {
       <p className="docs-text">We welcome contributions. The component architecture follows a consistent pattern: <code>types.ts</code> for prop interfaces, <code>styles.ts</code> for the style function, and the component TSX file wiring them together via <code>useStyles</code>.</p>
       <h2 className="docs-h2">Links</h2>
       <ul className="docs-list">
-        <li><Anchor href="https://github.com/nui-react/nui" target="_blank">GitHub Repository</Anchor></li>
+        <li><Anchor href="https://github.com/NUI-Library/nui" target="_blank">GitHub Repository</Anchor></li>
         <li><Anchor href="https://www.npmjs.com/package/nui-react" target="_blank">npm Package</Anchor></li>
       </ul>
       <h2 className="docs-h2">License</h2>
@@ -1074,7 +1074,7 @@ function DocsLayout() {
               <span className="docs-search-trigger-text">Search...</span>
               <span className="docs-kbd"><span className="docs-kbd-meta">{'⌘'}</span>K</span>
             </button>
-            <a className="docs-icon-btn" href="https://github.com/nui-react/nui" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GithubIcon /></a>
+            <a className="docs-icon-btn" href="https://github.com/NUI-Library/nui" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GithubIcon /></a>
             <button className="docs-icon-btn" onClick={toggleColorScheme} aria-label="Toggle theme">{colorScheme === "dark" ? <SunIcon /> : <MoonIcon />}</button>
           </div>
         </div>

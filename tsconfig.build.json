@@ -4,8 +4,15 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
+    "rootDir": "src",
     "noEmit": false,
-    "rootDir": "src"
+    "incremental": false,
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["node", "react", "react-dom"]
   },
   "include": ["src/**/*"],
   "exclude": [
@@ -13,6 +20,8 @@
     "node_modules",
     "dist",
     "app",
-    ".next"
+    ".next",
+    "**/*.test.ts",
+    "**/*.test.tsx"
   ]
 }
