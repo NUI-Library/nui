@@ -1,0 +1,29 @@
+# Next.js app (demo/playground only)
+app/
+.next/
+out/
+
+# Source code (we ship compiled dist/)
+src/
+scripts/
+
+# Config files
+tsup.config.ts
+tsconfig.json
+tsconfig.build.json
+next.config.*
+postcss.config.*
+next-env.d.ts
+components.json
+
+# Development
+node_modules/
+.env*
+.git/
+.gitignore
+.vscode/
+*.log
+
+# Misc
+public/
+CHANGELOG.md
