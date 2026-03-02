@@ -1,10 +1,6 @@
 import type { Theme, Size, RadiusSize } from "../../theme/types";
 import type { StylesDefinition } from "../../styles/use-styles";
 
-// ──────────────────────────────────────────────
-// Input Style Generator
-// ──────────────────────────────────────────────
-
 interface InputStyleProps {
   size: Size;
   radius: RadiusSize;
@@ -54,8 +50,8 @@ export function inputStyles(theme: Theme, props: InputStyleProps): StylesDefinit
       height: sizeConfig.height,
       fontSize: sizeConfig.fontSize,
       padding: sizeConfig.padding,
-      paddingLeft: hasLeftSection ? "2.25rem" : undefined,
-      paddingRight: hasRightSection ? "2.25rem" : undefined,
+      paddingLeft: hasLeftSection ? "2.25rem" : sizeConfig.padding.split(' ')[1],
+      paddingRight: hasRightSection ? "2.25rem" : sizeConfig.padding.split(' ')[1],
       fontFamily: "var(--nui-font-family)",
       borderRadius: `var(--nui-radius-${radius})`,
       borderWidth: "1px",
