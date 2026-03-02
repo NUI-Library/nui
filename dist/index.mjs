@@ -510,11 +510,11 @@ Button.displayName = "NUI.Button";
 
 // src/components/Input/styles.ts
 var sizeMap2 = {
-  xs: { height: "1.75rem", fontSize: "var(--nui-font-size-xs)", padding: "0 0.5rem" },
-  sm: { height: "2rem", fontSize: "var(--nui-font-size-sm)", padding: "0 0.625rem" },
-  md: { height: "2.375rem", fontSize: "var(--nui-font-size-sm)", padding: "0 0.75rem" },
-  lg: { height: "2.75rem", fontSize: "var(--nui-font-size-md)", padding: "0 0.875rem" },
-  xl: { height: "3.25rem", fontSize: "var(--nui-font-size-md)", padding: "0 1rem" }
+  xs: { height: "1.75rem", fontSize: "var(--nui-font-size-xs)", padding: "0.35rem 0.6rem" },
+  sm: { height: "2rem", fontSize: "var(--nui-font-size-sm)", padding: "0.4rem 0.75rem" },
+  md: { height: "2.375rem", fontSize: "var(--nui-font-size-sm)", padding: "0.55rem 0.875rem" },
+  lg: { height: "2.75rem", fontSize: "var(--nui-font-size-md)", padding: "0.65rem 1rem" },
+  xl: { height: "3.25rem", fontSize: "var(--nui-font-size-md)", padding: "0.8rem 1.125rem" }
 };
 function inputStyles(theme, props) {
   const { size, radius, error, hasLeftSection, hasRightSection } = props;
@@ -548,8 +548,8 @@ function inputStyles(theme, props) {
       height: sizeConfig.height,
       fontSize: sizeConfig.fontSize,
       padding: sizeConfig.padding,
-      paddingLeft: hasLeftSection ? "2.25rem" : void 0,
-      paddingRight: hasRightSection ? "2.25rem" : void 0,
+      paddingLeft: hasLeftSection ? "2.25rem" : sizeConfig.padding.split(" ")[1],
+      paddingRight: hasRightSection ? "2.25rem" : sizeConfig.padding.split(" ")[1],
       fontFamily: "var(--nui-font-family)",
       borderRadius: `var(--nui-radius-${radius})`,
       borderWidth: "1px",
