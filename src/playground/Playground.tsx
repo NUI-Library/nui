@@ -1065,7 +1065,7 @@ function DocsLayout() {
             <div className="docs-logo" onClick={() => navigate("getting-started")}>
               <div className="docs-logo-mark">N</div>
               <span className="docs-logo-text">NUI</span>
-              <span className="docs-version">v0.1.0</span>
+              <span className="docs-version">v0.1.1</span>
             </div>
           </div>
           <div className="docs-navbar-right">
