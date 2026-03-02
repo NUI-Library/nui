@@ -1,6 +1,6 @@
 {
   "name": "nui-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React UI library with custom initialization, powerful theming, and zero external dependencies.",
   "keywords": [
     "react",
