@@ -37,4 +37,10 @@ export default defineConfig({
   target: "es2020",
   tsconfig: "tsconfig.build.json",
   outDir: "dist",
+  
+  esbuildOptions(options) {
+    options.banner = {
+      js: '"use client";',
+    }
+  },
 });
