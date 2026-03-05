@@ -44,7 +44,7 @@ jobs:
       - run: pnpm build:lib
 
       - name: Publish to npm
-        run: pnpm publish --provenance --access public --no-git-checks
+        run: npm publish --provenance --access public --no-git-checks
 
       - name: Publish to GitHub Packages
         run: |
