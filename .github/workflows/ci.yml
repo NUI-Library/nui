@@ -39,18 +39,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          registry-url: https://registry.npmjs.org
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm build:lib
 
       - name: Publish to npm
         run: npm publish --provenance --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com
 
       - name: Publish to GitHub Packages
         run: |
-          # Change name to scoped version for GH Packages
-          npm pkg set name="@nui-library/nui-react" 
-          # Use the GITHUB_TOKEN to auth against GH registry
+          npm pkg set name="@nui-library/nui-react"
           pnpm publish --registry https://npm.pkg.github.com --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
